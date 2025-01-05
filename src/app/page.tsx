@@ -10,7 +10,7 @@ async function fetchFromInternet() {
     const data = await response.json();
     return data.map((item: { title: any }) => item.title);
   } catch (error) {
-    console.error(error);
+    console.log(error);
     return [];
   }
 }
@@ -22,7 +22,7 @@ async function fetchFromUbuntu() {
     const data = await response.json();
     return data.map((item: any) => `${item.name} - ${item.email}`);
   } catch (error) {
-    console.error(error);
+    console.log(error);
     return [];
   }
 }
@@ -34,7 +34,7 @@ async function fetchWindows() {
     const data = await response.json();
     return data.map((item: any) => `${item.name} - ${item.email}`);
   } catch (error) {
-    console.error(error);
+    console.log(error);
     return [];
   }
 }
