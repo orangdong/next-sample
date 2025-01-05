@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // import Image from "next/image";
 
 import DataTab from "@/components/DataTab";
@@ -5,7 +6,7 @@ import DataTab from "@/components/DataTab";
 async function fetchFromInternet() {
   const response = await fetch("https://api.vercel.app/blog");
   const data = await response.json();
-  return data.map((item: any) => item.title);
+  return data.map((item: { title: any }) => item.title);
 }
 
 // async function fetchFromUbuntu() {
